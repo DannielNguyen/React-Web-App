@@ -3,15 +3,14 @@ import { useQuery } from 'urql'
 import { PRODUCT_QUERY } from "../lib/query"
 import Product from '../components/Products'
 import { Gallery } from '../styles/Gallery'
-import Nav from '../components/Nav'
-
+import SearchBar from '../components/searchBar'
+import useState from "react"
 export default function Home() {
   const [results] = useQuery({query: PRODUCT_QUERY})
   const {data, fetching, error} = results
-  if (fetching) return <p>Loading...</p>
-  if (error) return <p>Oh no... {error.message}</p>
+  if (fetching) return <p>Loading your content...</p>
+  if (error) return <p>An error has occured: {error.message}</p>
   const products = data.products.data
-  console.log(products)
   return (
     <div>
       <Head>
@@ -22,13 +21,8 @@ export default function Home() {
       </Head>
 
       <main>
-      <h1>Hello future scammers!</h1>
-      <Gallery>
-        {products.map(prod =>
-         <Product key = {prod.attributes.Slug} product = {prod}/>)}
-
-      </Gallery>
-      
+      <h1>Hello Future Millionaires!</h1>
+      <SearchBar data = {products}/> 
       </main>
     </div>
 

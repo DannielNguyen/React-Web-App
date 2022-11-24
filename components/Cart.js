@@ -74,7 +74,7 @@ await stripe.redirectToCheckout({sessionId: data.id})
 					{cartItems.length >= 1 && (
 						<Checkout layout>
 							<h3>Subtotal:{totalPrice}</h3>
-							<button onClick ={handleCheckout}>Purchase</button>
+							<button id = 'checkout' onClick ={handleCheckout}>Purchase</button>
 						</Checkout>
 							
 						

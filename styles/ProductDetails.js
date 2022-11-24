@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 export const DetailsStyle = styled.div`
 display: flex;
-justify-content: space-between;
+justify-content:inline;
 margin-top: 3rem;
 img{
     width:40%;
+    border: 2px solid white;
+    margin-right: 5rem;
+    margin-left: 5rem;
 }
 `
 export const ProductInfo = styled.div`
@@ -43,3 +46,12 @@ width:100%;
 background: var(--primary);
 color:white;
 font-weight:500;`
+
+export const SearchStyle = styled.input`
+height:40px;
+width: 25%;
+padding: 2px;
+  font-size: 17px;
+  border:1px solid black;
+  border-radius: 25px;
+`

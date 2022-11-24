@@ -37,7 +37,7 @@ export default async function handler(req,res){
       mode: 'payment',
       //sucess url and cancel url 
       success_url:`${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url:`${req.headers.origin}/cancel`
+      cancel_url:`${req.headers.origin}/canceled`
     })
       res.status(200).json(session)
      } catch (error){
@@ -73,7 +73,7 @@ export default async function handler(req,res){
       mode: 'payment',
       //sucess url and cancel url 
       success_url:`${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url:`${req.headers.origin}/cancel`
+      cancel_url:`${req.headers.origin}/canceled`
     })
       res.status(200).json(session)
      } catch (error){
