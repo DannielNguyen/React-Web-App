@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
 export const NavStyles = styled.nav`
-min-height: 15vh ;
+overflow:hidden;
+min-height: 8vh ;
 display: flex;
 justify-content: space-between;
 align-items: center;
 font-size: 1rem;
+margin-top: 1rem;
+position: relative;
+margin-left:-8rem;
 a{
     font-size: 1.2rem;
 }
 p{
   float:right;
-  padding:.5rem;
-  line-height: 1rem;
 }
 svg{
     font-size: 2rem;
@@ -21,7 +23,16 @@ svg{
 div{
     margin-right:0.2rem;
 }
-
+.logo{
+  svg{
+    font-size:3rem;
+  }
+  p{
+    font-weight: bold;
+    font-size:20px;
+    padding:.5rem;
+  }
+}
 `
 export const NavItems = styled.div`
 display:flex;
@@ -37,6 +48,7 @@ div{
 h3{
     font-size: 1rem;
     padding: 0.25rem;
+    cursor:pointer;
 }
 svg{
     font-size: 1.5rem;

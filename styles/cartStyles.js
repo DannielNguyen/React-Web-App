@@ -15,7 +15,7 @@ export const CartWrapper = styled(motion.div)`
 `;
 export const CartStyle = styled(motion.div)`
 width: 35%;
-background: #f1f1f1;
+background: white;
 padding: 2rem 2rem;
 overflow-y:scroll;
 position: relative;
@@ -25,6 +25,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 border-radius: 1rem;
+border:2px solid black;
 overflow:hidden;
 background: white;
 padding: 2rem;
@@ -59,12 +60,18 @@ export const EmptyStyle = styled(motion.div)`
 
 export const Checkout = styled(motion.div)`
   button {
-    background: var(--primary);
+    background:white;
+    border: 2px solid black;
     padding: 1rem 2rem;
     width: 100%;
-    color: white;
+    color: black;
     margin-top: 2rem;
     cursor: pointer;
+    border-radius: .4rem;
+    font-size: 20px;
+  }
+  p{
+    margin-right: 5rem;
   }
 `;
 export const Cards = styled(motion.div)``;

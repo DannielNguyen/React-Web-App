@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-// Specify Stripe secret api key here
+import { StyledButton } from "../styles/ProductDetails.js";
 const stripe = require("stripe")(
   `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`
 );
@@ -35,13 +35,11 @@ export default function Profile({ user, orders }) {
                 <h2>{formatMoney(order.amount)}</h2>
                 <h2>status: {order.status}</h2>
               </div>
-              <div>
-                <h1>Receipt Email {order.receipt_email}</h1>
-              </div>
+             
             </Order>
           ))}
         </div>
-        <button onClick={() => route.push("/api/auth/logout")}>Log out</button>
+        <StyledButton onClick={() => route.push("/api/auth/logout")}>Log out</StyledButton>
       </div>
     )
   );

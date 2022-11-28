@@ -7,6 +7,7 @@ import { useStateContext } from "../lib/context";
 import User from "./User";
 import React from "react";
 import { useRouter } from "next/router";
+import Link from 'next/link';
 
 const {AnimatePresence, motion} = require('framer-motion')
 export default function Nav() {
@@ -16,11 +17,11 @@ export default function Nav() {
   return (
        
     <NavStyles>
-      <div class = 'logo'><GiHumanPyramid/><p>Generic Pyramid</p></div>
+      <div class = 'logo'><GiHumanPyramid onClick={() => route.push(`/`)}/><p>PYRAMID</p></div>
         <NavItems>
-          <div><AiTwotoneHome class = 'home' color='gold' onClick={() => route.push(`/`)}/></div>
-          <div><p>About</p></div>
-          <div><p>Contact</p></div>
+          <div><AiTwotoneHome class = 'home' onClick={() => route.push(`/`)}/></div>
+          <div onClick={() => route.push(`/product`)}><h3>PRODUCTS</h3></div>
+          <div><Link href="/#second-section" scroll={false}><h3>REVIEWS</h3></Link></div>
                     <User />
             <div onClick={()=> setShowCart(true)}>
               {totalQty > 0 && <motion.span animate = {{scale:1}} initial = {{scale: 0}}>{totalQty}</motion.span> }

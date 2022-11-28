@@ -4,6 +4,7 @@ import {FiShoppingCart} from 'react-icons/fi';
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import { Quantity } from '../styles/ProductDetails';
 import getStripe from '../lib/getStripe';
+import { useState } from 'react';
 const card = {
 	hidden: {opacity: 0, scale: 0.8},
 	show:{ opacity:1, scale:1},
@@ -21,14 +22,19 @@ const cards = {
 
 export default function Cart() {
 	const { cartItems,setShowCart, onAdd, onRemove, totalPrice} = useStateContext();
+	const[isLoading,setIsLoading] = useState(false)
 	//payment
 const handleCheckout = async () =>{
+	setIsLoading(true)
 	const stripe = await getStripe()
 	const response = await fetch("/api/stripe",{
 		method: "POST",
 		headers: {"Content-Type" : "application/json"},
 		body: JSON.stringify(cartItems)
+
+	
 	})
+	setIsLoading(false)
 
 const data = await response.json()
 await stripe.redirectToCheckout({sessionId: data.id})
@@ -63,6 +69,7 @@ await stripe.redirectToCheckout({sessionId: data.id})
 										<button onClick={() => onAdd(item,1)}>
 										<AiFillPlusCircle />
 										</button>
+										
 
 										
 									</Quantity>
@@ -72,11 +79,13 @@ await stripe.redirectToCheckout({sessionId: data.id})
 					})}
 					</Cards>
 					{cartItems.length >= 1 && (
-						<Checkout layout>
+						<Checkout>
 							<h3>Subtotal:{totalPrice}</h3>
 							<button id = 'checkout' onClick ={handleCheckout}>Purchase</button>
+								{isLoading == true && <p>Taking you to secured checkout...</p>}
+
 						</Checkout>
-							
+
 						
 					)}
 			</CartStyle>

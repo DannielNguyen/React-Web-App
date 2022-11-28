@@ -29,6 +29,7 @@ button{
     display: flex;
     font-size:1.5rem;
     padding: 0rem 0.4rem;
+
 }
 p{
     width:1rem;
@@ -41,17 +42,21 @@ svg{
     color: #494949;
 }
 `
-export const Buy = styled.button`
+export const StyledButton = styled.button`
 width:100%;
 background: var(--primary);
 color:white;
-font-weight:500;`
+font-weight:500;
+border-radius: .4rem;
+border:none;
+`
 
 export const SearchStyle = styled.input`
-height:40px;
+height: 50px;
 width: 25%;
 padding: 2px;
   font-size: 17px;
   border:1px solid black;
   border-radius: 25px;
+
 `

@@ -23,7 +23,9 @@ return(
    onChange={handleFilter}/>
     
    
-
+   {filterData.length < 1 && (
+    <h1>No Results :(</h1>
+   )}
    {filterData.length != 0 && (
      <Gallery>
         {filterData.map(prod =>

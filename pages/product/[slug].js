@@ -1,7 +1,7 @@
 import { Context, useQuery } from 'urql';
 import { GET_PRODUCT_QUERY } from '../../lib/query';
 import { useRouter } from 'next/router';
-import { DetailsStyle, ProductInfo, Quantity, Buy } from '../../styles/ProductDetails';
+import { DetailsStyle, ProductInfo, Quantity,StyledButton } from '../../styles/ProductDetails';
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import {useStateContext} from '../../lib/context'
 import { useEffect } from 'react';
@@ -35,7 +35,7 @@ export default function ProductDetails() {
 		<DetailsStyle>
 			<img src={Image.data.attributes.formats.medium.url} alt="" />
 			<ProductInfo>
-				<h3>{title}</h3>
+				<h2>{title}</h2>
 				<p>{Description}</p>
 
 				<Quantity>
@@ -48,7 +48,7 @@ export default function ProductDetails() {
 						<AiFillPlusCircle onClick= {increaseQty} />
 					</button>
 				</Quantity>
-				<Buy onClick = {() => onAdd(data.products.data[0].attributes,Qty)}>Add to cart</Buy>
+				<StyledButton onClick = {() => onAdd(data.products.data[0].attributes,Qty)}>Add to cart</StyledButton>
 			</ProductInfo>
 		</DetailsStyle>
 	);
