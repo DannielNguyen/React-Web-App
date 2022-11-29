@@ -1,5 +1,4 @@
-import Head from 'next/head'
-import { useQuery } from 'urql'
+import { useQuery } from 'urql';
 import { PRODUCT_QUERY } from "../lib/query"
 import SearchBar from '../components/searchBar'
 export default function product() {
