@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useQuery } from 'urql'
 import { PRODUCT_QUERY } from "../lib/query"
 import Cover from'../components/Cover'
-import Review from '../components/review'
+import Review from '../components/Review'
 
 export default function Home() {
   const [results] = useQuery({query: PRODUCT_QUERY})
