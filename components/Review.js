@@ -6,7 +6,7 @@ export default function Review() {
         <figure class="snip1533">
   <figcaption>
     <blockquote>
-      <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+      <p>If you do the job badly enough, sometimes you don\'t get asked to do it again.</p>
     </blockquote>
     <h3>Wisteria Ravenclaw</h3>
     <h4>Google Inc.</h4>
@@ -15,7 +15,7 @@ export default function Review() {
 <figure class="snip1533">
   <figcaption>
     <blockquote>
-      <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+      <p>I\'m killing time while I wait for life to shower me with meaning and happiness.</p>
     </blockquote>
     <h3>Ursula Gurnmeister</h3>
     <h4>Facebook</h4>
