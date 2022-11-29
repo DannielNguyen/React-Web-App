@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from 'urql';
 import { PRODUCT_QUERY } from "../lib/query"
 import SearchBar from '../components/searchBar'
