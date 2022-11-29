@@ -36,7 +36,7 @@ const handleCheckout = async () =>{
 	})
 	setIsLoading(false)
 
-const data = await response.json()
+const data = await response.text()
 await stripe.redirectToCheckout({sessionId: data.id})
 }
 	return (
