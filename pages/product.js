@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from 'urql';
 import { PRODUCT_QUERY } from "../lib/query"
 import SearchBar from '../components/searchBar'
-export default function product() {
+export default function Product() {
   const [results] = useQuery({query: PRODUCT_QUERY})
   const {data, fetching, error} = results
   if (fetching) return <p>Loading your content...</p>
