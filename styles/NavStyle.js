@@ -72,7 +72,7 @@ span{
     font-size: .9rem;
     position: absolute;
     right: -2%;
-    top: -15%;
+    top: -5%;
     pointer-events: none;
 }
 .search {
