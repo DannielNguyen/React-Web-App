@@ -71,8 +71,8 @@ span{
     border-radius: 50%;
     font-size: .9rem;
     position: absolute;
-    right: -2%;
-    top: -5%;
+    right: -20%;
+    top: -40%;
     pointer-events: none;
 }
 .search {
