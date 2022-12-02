@@ -7,7 +7,7 @@ export const CartWrapper = styled(motion.div)`
     height: 100vh;
     width: 100%;
     background: rgba(0,0,0,0.4);
-    z-index: 100;
+    z-index: 120;
     display: flex;
     justify-content: flex-end;
     //display:none;
