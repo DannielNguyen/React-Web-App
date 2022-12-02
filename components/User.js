@@ -11,7 +11,6 @@ export default function User() {
     return (
       <div onClick={() => route.push(`/api/auth/login`)}>
         <FaUserCircle className="profile" />
-        <h3>Login</h3>
       </div>
     );
   return (

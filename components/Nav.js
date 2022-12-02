@@ -26,7 +26,6 @@ export default function Nav() {
             <div onClick={()=> setShowCart(true)}>
               {totalQty > 0 && <motion.span animate = {{scale:1}} initial = {{scale: 0}}>{totalQty}</motion.span> }
             <FiShoppingBag />
-            <h3>Cart</h3>
             </div>
            </NavItems>
            <AnimatePresence>{showCart&& <Cart />}
