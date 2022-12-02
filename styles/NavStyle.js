@@ -71,7 +71,7 @@ span{
     border-radius: 50%;
     font-size: .9rem;
     position: absolute;
-    right: -.5%;
+    right: -0%;
     top: -20%;
     pointer-events: none;
 }
